@@ -1,0 +1,15 @@
+<h1>Today's Bikes</h1>
+
+<ul>
+  <% @bikes.each do |bike| %>
+    <li>
+      <strong> <%= bike.name %></strong>
+      <strong><%= bike.year %></strong>
+      <p><%= bike.description %></p>
+      <%= link_to "More info", bike_path(bike) %>
+
+      <%= link_to "Add new bike", new_bike_path %>
+    </li>
+    <% end %>
+</ul>
+
