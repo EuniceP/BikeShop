@@ -5,11 +5,12 @@
     <li>
       <strong> <%= bike.name %></strong>
       <strong><%= bike.year %></strong>
-      <p><%= bike.description %></p>
-      <%= link_to "More info", bike_path(bike) %>
+      <p><%= bike.description %></p><br>
+      <%= link_to "Detail..", bike_path(bike) %>
 
-      <%= link_to "Add new bike", new_bike_path %>
     </li>
     <% end %>
+    <br>
+   <%= link_to "Add", new_bike_path %>
 </ul>
 

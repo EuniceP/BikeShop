@@ -2,5 +2,6 @@
 
 <p>This bike is from  <%= @bike.year %>. <%= @bike.description %>  </p>
 
-
-<%= link_to "Back to the list!", bikes_path %>
+<%= link_to "Edit", edit_bike_path(@bike)%>
+<%= link_to "Delete", :bike, method: :delete, data: {confirm: "Are you sure you want to delete this bike?"}  %> 
+<%= link_to "Back to the bike list!", bikes_path %>

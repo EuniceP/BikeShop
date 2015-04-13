@@ -1,0 +1,12 @@
+<h1> Edit</h1>
+<%= form_for @bike do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Year: <%= f.text_field  :year %>
+  Description: <%= f.text_field :description %>
+
+  <%= f.submit "Edit bikes!" %>
+  
+<% end %>
+
+<%= link_to "Back to the list!", bikes_path %>
