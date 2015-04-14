@@ -1,16 +1,17 @@
-<h1>Today's Bikes</h1>
+<h1>Crudmuffin's Bikes</h1>
 
 <ul>
   <% @bikes.each do |bike| %>
     <li>
       <strong> <%= bike.name %></strong>
       <strong><%= bike.year %></strong>
-      <p><%= bike.description %></p><br>
+      <p><%= bike.description %></p>
+
       <%= link_to "Detail..", bike_path(bike) %>
 
     </li>
     <% end %>
-    <br>
-   <%= link_to "Add", new_bike_path %>
+    <br><br>
+   <%= link_to "Add a new bike", new_bike_path %>
 </ul>
 
