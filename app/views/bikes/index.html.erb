@@ -1,17 +1,23 @@
-<h1>Crudmuffin's Bikes</h1>
 
-<ul>
-  <% @bikes.each do |bike| %>
-    <li>
-      <strong> <%= bike.name %></strong>
-      <strong><%= bike.year %></strong>
-      <p><%= bike.description %></p>
 
-      <%= link_to "Detail..", bike_path(bike) %>
+<br><br><br><br><br><br>
 
-    </li>
-    <% end %>
-    <br><br>
-   <%= link_to "Add a new bike", new_bike_path %>
-</ul>
+<% @bikes.each do |bike| %>
+<table class="table table-striped">
+   <tr>
+       <th>Bicycle Name <nobr><%= button_to "more info", bike_path(bike), :class => "btn btn-default btn-xs", :method => :get  %></th>
+       <th>Year Produced</th>
+       <th>Description</th>
+   </tr>
+   <tr>
+       <td><%= bike.name %></td>
+       <td><%= bike.year %></td>
+       <td><%= bike.description %></td>
+   </tr>
+</table>
 
+
+<br>
+   <% end %>
+   
+<%= button_to "Add new bike!", new_bike_path, :class => "btn btn-primary", :method => :get  %>
